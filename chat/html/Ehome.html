@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Friend</title>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const onChangeSelect = () => {  
+            let langSelect = document.querySelector(".language_button");  
+            let selectText = langSelect.options[langSelect.selectedIndex].text;
+            if(selectText === "Korean") window.location.href = "./Khome"
+        }
+    </script>
+    <div class="menu-bar" style="text-align:center;">
+        <a id="logo_friend" href="Ehome">Friend</a>
+        <a class="home_logo" href="Ehome">Home</a>
+        <a href="Evideocell">VideoCell</a>
+        <a href="Emessage">Message</a>
+        <select name="language" class="language_button" onchange="onChangeSelect()">
+            <option value="english" selected>English</option>
+            <option value="korean">Korean</option>
+        </select>
+    </div>
+    <div class="text1" data-aos="fade-right" data-aos-delay="300">
+        <h1>With everyone in the world<br>Connection, <a class="emphasis">friend</a></h1>
+        <img class="first_img" src="../image/page.png">
+    </div>
+    <div class="text2" data-aos="fade-left" data-aos-delay="300">
+        <img class="second_img" src="../image/videocell.png">
+        <h1>In real time, with people<br><a class="emphasis">Share</a> my daily life.</h1>
+    </div>
+    <div class="text3" data-aos="fade-right" data-aos-delay="300">
+        <h1>Make memories by <a class="emphasis">talking</a> to<br>your precious people.</h1>
+        <img class="third_img" src="../image/message.png">
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer_contents">
+                <img class="logo_connect" src="../image/logo_connect.png">
+                <li class="friend_word">Friend is a web created by students attending Daegu Software Meister High School to communicate with people around the world.</li><br>
+            </div>
+            <div class="friend_contents">
+                <ul>
+                    <li class="jungbo">Information</li><br>
+                    <li><a class="address" href="http://dgswhs.kr:8090/">Daegu Software Meister High School</a></li>
+                    <li><a class="address" href="https://www.google.com/maps/place/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EB%A7%88%EC%9D%B4%EC%8A%A4%ED%84%B0%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90/data=!4m5!3m4!1s0x356f59450095604b:0xdcee02065d82e483!8m2!3d35.6632493!4d128.4141269">Location: 93 Chang-ri 11-gil, Guji-myeon, Dalseong-gun, Daegu</a></li>
+                    <li class="email">email: friend7@naver.com</li>
+                    <li class="phonenumber">phonenumber: 053-231-9240</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/message.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <title>메세지</title>
+</head>  
+<body>
+    <script>
+        const onChangeSelect = () => {  
+            let langSelect = document.querySelector(".language_button");  
+            let selectText = langSelect.options[langSelect.selectedIndex].text;  
+            if(selectText === "영어") window.location.href = "./Emessage"
+        }
+    </script>
+    <div class="menu-bar" style="text-align:center;">
+        <a id="logo_friend" href="Khome">프렌드</a>
+        <a href="Khome">홈</a>
+        <a href="Kvideocell">화상 통화</a>
+        <a class="message_logo" href="Kmessage">메세지</a>
+        <select name="language" class="language_button" onchange="onChangeSelect()">
+            <option value="korean" selected>한국어</option>
+            <option value="english">영어</option>
+        </select>
+    </div>
+    <div class="message_main" data-aos="fade-in" data-aos-delay="300">
+        <img class="message" src="../image/message.png">
+        <div class="word">
+            <div class="big-word">
+                <a>소중한 사람들과 추억을 쌓는 메세지</a><br>
+            </div>
+            <div class="small-word">
+                <a><b>참여하기를 눌러 소중한 사람들과 추억을 쌓아보세요.<br>소중한 사람한테 한 발짝 다가가는 길입니다.</b></a>
+            </div>
+            <button id="attend" >참여하기</button>
+        </div>
+    </div>
+    <div class="modal">
+        <div class="modal_body">
+          <img src="../image/logo_connect.png" class="modal_img" />
+          <form action="/" method="post">
+            <span class="line"><p id="roomNumber">방번호<br /></p></span>
+            <input class="mordalText" type="text" name="title" id="roomNum"/>
+            <p id="nickName">닉네임<br /></p>
+            <input class="mordalText" type="text" name="username" id="name" /><br />
+            <input id="submitStyle" type="submit" value="참여하기"/>
+          </form>
+        </div>
+    </div>
+    <script>
+        const modal = document.querySelector(".modal");
+        const btnAttend = document.getElementById('attend');
+        const room = document.getElementById('roomNum');
+        const name = document.getElementById('name');
+        const submitStyle = document.getElementById('submitStyle');
+
+        btnAttend.addEventListener("click", (e) => {
+            modal.style.display = "block";
+        });
+
+        window.addEventListener("click", (e) => {
+        e.target === modal ? (modal.style.display = "none") : "";
+        });
+
+
+        document.getElementById('roomNum').onfocus = roomClick;
+        function roomClick() {
+            document.getElementById('roomNumber').style.color = '#2bdc7d';
+            document.getElementById('roomNum').style.borderBottomColor = '#2bdc7d';
+        }
+        document.getElementById('roomNum').onblur = roomUnClick;
+        function roomUnClick() {
+            if(document.getElementById('roomNum').value === '') {
+                document.getElementById('roomNumber').style.color = 'gray';
+                document.getElementById('roomNum').style.borderBottomColor = 'gray';
+            }
+        }
+
+        document.getElementById('name').onfocus = nameClick;
+        function nameClick() {
+            document.getElementById('nickName').style.color = '#2bdc7d';
+            document.getElementById('name').style.borderBottomColor = '#2bdc7d';
+        }
+        document.getElementById('name').onblur = nameUnClick;
+        function nameUnClick() {
+            if(document.getElementById('name').value === '') {
+                document.getElementById('nickName').style.color = 'gray';
+                document.getElementById('name').style.borderBottomColor = 'gray';
+            }
+        }
+
+        document.getElementById('submitStyle').onclick = submitClick;
+        function submitClick() {
+            if(document.getElementById('name').value == '' || document.getElementById('roomNum').value =='') {
+                alert('빈칸을 채워주세요');
+                return false;
+
+            }else {
+                window.open(`/message?name=${name.value}&room=${room.value}`);
+            }
+        }
+    </script>
+    <footer>
+      <div class="footer">
+          <div class="footer_contents">
+              <img class="logo_connect" src="../image/logo_connect.png">
+              <li class="friend_word">프렌드는 대구소프트웨어마이스터고등학교에 재학 중인 학생들이 전 세계 사람들과 소통하기 위해 만든 웹 입니다.</li><br>
+          </div>
+          <div class="friend_contents">
+              <ul>
+                  <li class="jungbo">정보</li><br>
+                  <li><a class="address" href="http://dgswhs.kr:8090/">대구소프트웨어마이스고등학교</a></li>
+                  <li><a class="address" href="https://www.google.com/maps/place/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EB%A7%88%EC%9D%B4%EC%8A%A4%ED%84%B0%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90/data=!4m5!3m4!1s0x356f59450095604b:0xdcee02065d82e483!8m2!3d35.6632493!4d128.4141269">위치 : 대구광역시 달성군 구지면 창리로11길 93</a></li>
+                  <li class="email">이메일: friend7@naver.com</li>
+                  <li class="phonenumber">전화번호: 053-231-9240</a></li>
+              </ul>
+          </div>
+      </div>
+  </footer>
+</body>
+</html>

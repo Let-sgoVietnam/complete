@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>프렌드</title>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const onChangeSelect = () => {  
+            let langSelect = document.querySelector(".language_button");  
+            let selectText = langSelect.options[langSelect.selectedIndex].text;  
+            if(selectText === "영어") window.location.href = "./Ehome"
+        }
+    </script>
+    <div class="menu-bar" style="text-align:center;">
+        <a id="logo_friend" href="Khome">프렌드</a>
+        <a class="home_logo" href="Khome">홈</a>
+        <a href="Kvideocell">화상 통화</a>
+        <a href="Kmessage">메세지</a>
+        <select name="language" class="language_button" onchange="onChangeSelect()" >
+            <option value="korean" selected>한국어</option>
+            <option value="english">영어</option>
+        </select>
+    </div>
+    <div class="text1" data-aos="fade-right" data-aos-delay="300">
+        <h1>전 세계 모든 사람들과의<br>연결고리, <a class="emphasis">프렌드</a></h1>
+        <img class="first_img" src="../image/page.png">
+    </div>
+    <div class="text2" data-aos="fade-left" data-aos-delay="300">
+        <img class="second_img" src="../image/videocell.png">
+        <h1>실시간으로 사람들과<br>나의 일상을 <a class="emphasis">공유</a>해보세요.</h1>
+    </div>
+    <div class="text3" data-aos="fade-right" data-aos-delay="300">
+        <h1>소중한 사람들과 <a class="emphasis">대화</a>를 나누며<br>추억을 쌓아보세요.</h1>
+        <img class="third_img" src="../image/message.png">
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer_contents">
+                <img class="logo_connect" src="../image/logo_connect.png">
+                <li class="friend_word">프렌드는 대구소프트웨어마이스터고등학교에 재학 중인 학생들이 전 세계 사람들과 소통하기 위해 만든 웹 입니다.</li><br>
+            </div>
+            <div class="friend_contents">
+                <ul>
+                    <li class="jungbo">정보</li><br>
+                    <li><a class="address" href="http://dgswhs.kr:8090/">대구소프트웨어마이스고등학교</a></li>
+                    <li><a class="address" href="https://www.google.com/maps/place/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EB%A7%88%EC%9D%B4%EC%8A%A4%ED%84%B0%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90/data=!4m5!3m4!1s0x356f59450095604b:0xdcee02065d82e483!8m2!3d35.6632493!4d128.4141269">위치 : 대구광역시 달성군 구지면 창리로11길 93</a></li>
+                    <li class="email">이메일: friend7@naver.com</li>
+                    <li class="phonenumber">전화번호: 053-231-9240</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
