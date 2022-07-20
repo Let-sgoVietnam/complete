@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../css/videocell.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>videocell</title>
+</head>
+<body>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+        const onChangeSelect = () => {  
+            let langSelect = document.querySelector(".language_button");  
+            let selectText = langSelect.options[langSelect.selectedIndex].text;  
+            if(selectText === "Korean") window.location.href = "./Kvideocell"
+        }
+    </script>
+    <div class="menu-bar" style="text-align:center;">
+        <a id="logo_friend" href="Ehome">Friend</a>
+        <a href="Ehome">Home</a>
+        <a class="video_logo" href="Evideocell">VideoCell</a>
+        <a href="Emessage">Message</a>
+        <select name="language" class="language_button" onchange="onChangeSelect()">
+            <option value="english" selected>English</option>
+            <option value="korean">Korean</option>
+        </select>
+    </div>
+    <div class="videocell_main" data-aos="fade-in" data-aos-delay="300">
+        <img class="videocell" src="../image/videocell.png">
+        <div class="word">
+            <div class="big-word">
+                <a>Video call to communicate with people<br>all over the world</a><br>
+            </div>
+            <div class="small-word">
+                <a><b>Click Join to communicate with people around the world.<br>It's a step closer to people all over the world.</b></a>
+            </div>
+            <button class="attend" onclick="location.href='https://172.20.10.2:1124'">participate</button>
+        </div>
+    </div>
+    <div class="section" data-aos="fade-in" data-aos-delay="300">
+        <input type="radio" name="slide" id="slide01" checked>
+        <input type="radio" name="slide" id="slide02">
+        <input type="radio" name="slide" id="slide03">
+        <input type="radio" name="slide" id="slide04">
+        <input type="radio" name="slide" id="slide05">
+        <input type="radio" name="slide" id="slide06">
+        <input type="radio" name="slide" id="slide07">
+        <input type="radio" name="slide" id="slide08">
+        <div class="slidewrap">
+            <ul class="slidelist">
+                <li>
+                    <div class="Explanation">Let me introduce my school!</div>
+                    <a>
+                        <label for="slide08" class="left"></label>
+                        <img src="../image/slide01.jpg">
+                        <label for="slide02" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <div class="Explanation">We're having a school programming contest</div>
+                    <a>
+                        <label for="slide01" class="left"></label>
+                        <img src="../image/slide02.jpg">
+                        <label for="slide03" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <div class="Explanation">It's a classroom where you study</div>
+                    <a>
+                        <label for="slide02" class="left"></label>
+                        <img src="../image/slide03.jpg">
+                        <label for="slide04" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <div class="Explanation">It's a programming lab where to learn languages</div>
+                    <a>
+                        <label for="slide03" class="left"></label>
+                        <img src="../image/slide04.jpg">
+                        <label for="slide05" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <div class="Explanation">It is a library that borrows various books</div>
+                    <a>
+                        <label for="slide04" class="left"></label>
+                        <img src="../image/slide05.jpg">
+                        <label for="slide06" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <div class="Explanation">It's an audiovisual room where to listen special lectures</div>
+                    <a>
+                        <label for="slide05" class="left"></label>
+                        <img src="../image/slide06.jpg">
+                        <label for="slide07" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <div class="Explanation">It's a lab where you study subjects</div>
+                    <a>
+                        <label for="slide06" class="left"></label>
+                        <img src="../image/slide07.jpg">
+                        <label for="slide08" class="right"></label>
+                    </a>
+                </li>
+                <li>
+                    <div class="Explanation">It's a dorm where I think like home</div>
+                    <a>
+                        <label for="slide07" class="left"></label>
+                        <img src="../image/slide08.png">
+                        <label for="slide01" class="right"></label>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="footer_contents">
+                <img class="logo_connect" src="../image/logo_connect.png">
+                <li class="friend_word">Friend is a web created by students attending Daegu Software Meister High School to communicate with people around the world.</li><br>
+            </div>
+            <div class="friend_contents">
+                <ul>
+                    <li class="jungbo">Information</li><br>
+                    <li><a class="address" href="http://dgswhs.kr:8090/">Daegu Software Meister High School</a></li>
+                    <li><a class="address" href="https://www.google.com/maps/place/%EC%86%8C%ED%94%84%ED%8A%B8%EC%9B%A8%EC%96%B4%EB%A7%88%EC%9D%B4%EC%8A%A4%ED%84%B0%EA%B3%A0%EB%93%B1%ED%95%99%EA%B5%90/data=!4m5!3m4!1s0x356f59450095604b:0xdcee02065d82e483!8m2!3d35.6632493!4d128.4141269">Location: 93 Chang-ri 11-gil, Guji-myeon, Dalseong-gun, Daegu</a></li>
+                    <li class="email">email: friend7@naver.com</li>
+                    <li class="phonenumber">phonenumber: 053-231-9240</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

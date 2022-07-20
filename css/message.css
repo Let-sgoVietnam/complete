@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.message_main {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+    margin-bottom: 80px;
+}
+
+.message {
+    width: 740px;
+    height: 600px;
+    padding-right: 40px;
+}
+
+.big-word {
+    font-size: 50px;
+    font-weight: bold;
+}
+
+.small-word {
+    font-size: 26px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+#attend {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 138px;
+    height: 50px;
+    background-color: #53e797;
+    color: white;
+    border: none;
+    font-size: 22px;
+    font-weight: bold;
+    border-radius: 10px;
+    display: flex;
+    margin-top: 120px;
+}
+
+
+.modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal_body {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 600px;
+    padding: 40px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    box-shadow: 0 2px 3px 0 rgba(34, 36, 38, 0.15);
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.modal_img {
+    margin-top: 30px;
+    width: 170px;
+    height: 170px;
+}
+
+#roomNumber {
+    color: gray;
+    padding-top: 30px;
+    font-size: 18px;
+    display: flex;
+    padding-left: 34px;
+    width: 150px;
+    height: 55px;
+    text-align: center;
+    align-items: center;
+}
+
+#nickName {
+    margin-top: 20px;
+    color: gray;
+    font-size: 17px;
+    display: flex;
+    padding-left: 32px;
+    width: 150px;
+    height: 55px;
+    text-align: center;
+    align-items: center;
+}
+
+.mordalText {
+    border: none;
+    border-right: 0px;
+    border-left: 0px;
+    border-top: 0px;
+    border-bottom: 1px solid gray;
+    width: 330px;
+    height: 30px;
+}
+
+#submitStyle {
+    margin-top: 50px;
+    width: 170px;
+    height: 60px;
+    border-radius: 15px;
+    background-color: #53e797;
+    color: white;
+    font-size: 24px;
+    border: none;
+}
+
+.modal input {
+    outline: none;
+    font-size: 16px;
+}

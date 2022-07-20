@@ -1,0 +1,39 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  padding: 20px 250px;
+  background-color: #454545;
+  color: white;
+}
+
+.footer li {
+  display: inline;
+  padding: 0 16px;
+  white-space: nowrap;
+}
+
+.logo_connect {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 18px;
+}
+
+.friend_word {
+  margin-left: 60px;
+  line-height: 60px;
+}
+
+.jungbo {
+  font-weight: bold;
+}
+
+.address {
+  color: white;
+  text-decoration: none;
+}
